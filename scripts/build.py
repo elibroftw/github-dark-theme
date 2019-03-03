@@ -19,10 +19,7 @@ except ImportError:
     pip(['install', '--user', 'libsass'])
     import sass
 
-if not os.path.exists('Builds'):
-    os.makedirs('Builds')
-
-with zipfile.ZipFile(f'Builds/Github Dark Theme (Firefox + Chrome) {version}.zip', 'w') as zf:
+with zipfile.ZipFile(f'Github Dark Theme (Firefox + Chrome) {version}.zip', 'w') as zf:
     zf.write('dist/manifest.json', 'manifest.json')  # add manifiest.json to archive
     # add icons to archive
     for icon in os.listdir('dist/icons'):
