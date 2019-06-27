@@ -66,7 +66,7 @@ body {
         color: $link-color !important;
     }
     .boxed-group .heading,
-    .boxed-group>h3 {
+    .boxed-group > h3 {
         background-color: $dropdown-bg !important;
         border-color: $border-color !important;
     }
@@ -86,8 +86,19 @@ body {
         background-color: $dropdown-bg !important;
         border-color: $border-color !important;
     }
-    a {
+    a:not(.IssueLabel):not(.IssueLabel--big) {
         color: $link-color !important;
+    }
+    div.commit-build-statuses {
+        .text-green {
+            color: $text-green-color !important;
+        }
+        .text-red {
+            color: $text-red-color !important;
+        }
+        .bg-pending {
+            color: $bg-pending-color !important;
+        }
     }
     .link-gray {
         color: $faded-link-color !important;
@@ -300,7 +311,7 @@ body {
         p.commit-title {
             color: $link-color !important;
         }
-        .sha-block>.sha {
+        .sha-block > .sha {
             color: $link-color !important;
         }
         .commit-meta {
@@ -329,7 +340,7 @@ body {
         border-bottom: 1px solid $border-color !important;
     }
     /* # Search */
-    .code-list .code-list-item+.code-list-item {
+    .code-list .code-list-item + .code-list-item {
         border-color: $border-color !important;
     }
     .code-list .divider .blob-code,
@@ -380,10 +391,11 @@ body {
     .conversation-list-heading .inner {
         background: $dropdown-bg;
     }
-    .application-main .flex-wrap{
+    .application-main .flex-wrap {
         background-color: $bg-color !important;
     }
-    .note, .help {
+    .note,
+    .help {
         color: $faded-link-color !important;
     }
 }

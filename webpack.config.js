@@ -3,14 +3,15 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var extractCSS = new ExtractTextPlugin('app.css');
 
-module.exports = {
+var config = {
     entry: __dirname + '/src/app.scss',
     output: {
         path: __dirname + '/dist/app',
         filename: 'app.js'
     },
     module: {
-        rules: [{
+        rules: [
+            {
                 test: /\.css$/,
                 use: extractCSS.extract(['css-loader'])
             },
@@ -24,7 +25,7 @@ module.exports = {
             {
                 test: /\.png$/,
                 loader: 'url-loader'
-            },
+            }
         ]
     },
     resolve: {
@@ -32,3 +33,12 @@ module.exports = {
     },
     plugins: [extractCSS]
 };
+
+var firefoxConfig = Object.assign({}, config, {
+    output: {
+        path: __dirname + '/dist-firefox/app',
+        filename: 'app.js'
+    }
+});
+
+module.exports = [config, firefoxConfig];

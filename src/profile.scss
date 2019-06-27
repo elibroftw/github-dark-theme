@@ -4,7 +4,7 @@
     background-color: $border-color !important;
 }
 
-.profile-rollup-wrapper+.profile-rollup-wrapper {
+.profile-rollup-wrapper + .profile-rollup-wrapper {
     border-color: $border-color !important;
 }
 
@@ -44,4 +44,8 @@
 
 .avatar-before-user-status {
     border: none !important;
+}
+
+.pinned-item-name {
+    color: $text-color !important;
 }

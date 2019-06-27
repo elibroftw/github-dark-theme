@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>Vladimir Mikhaylovskiy</string>
+	<string>Poy Chang</string>
 	<key>Builder Version</key>
 	<string>12603.2.4</string>
 	<key>CFBundleDisplayName</key>
-	<string>safari-dark-github</string>
+	<string>github-dark-theme</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.singingcode.safari-dark-github</string>
+	<string>io.github.poychang.github-dark-theme</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
