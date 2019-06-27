@@ -120,6 +120,9 @@ body {
     .select-menu-item {
         border-color: $border-color !important;
         background-color: $dropdown-bg !important;
+        &:hover, &:focus {
+            background-color: $file-row-active-bg !important;
+        }
         &.navigation-focus {
             background-color: $border-color !important;
             .description-inline,
@@ -127,6 +130,10 @@ body {
             &.selected {
                 background-color: $border-color !important;
             }
+        }
+
+        .select-menu-item-text pre {
+            color: $text-color !important;
         }
     }
     .label-select-menu .select-menu-item.js-navigation-item.selected {
@@ -142,6 +149,7 @@ body {
         border-color: $border-color !important;
     }
     .select-menu-tabs .select-menu-tab-nav.selected,
+    .select-menu-tabs .select-menu-tab-nav[aria-selected="true"],
     .select-menu-tabs a.selected {
         background-color: $dropdown-bg !important;
         color: $link-color-selected !important;
@@ -151,8 +159,14 @@ body {
     .select-menu-tabs a:hover {
         color: $link-color-selected !important;
     }
+    .select-menu-tabs .select-menu-tab-nav[aria-selected="true"] {
+        border-bottom-color: $dropdown-bg !important;
+    }
     .dropdown-menu {
         background-color: $dropdown-bg !important;
+        &:after {
+            border-bottom-color: $dropdown-bg !important;
+        }
         .user-status-emoji-only-header {
             background-color: $dropdown-bg !important;
         }

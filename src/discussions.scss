@@ -79,6 +79,18 @@ body {
     .timeline-new-comment .timeline-comment::after {
         border-right-color: $tag-bg-color !important;
     }
+    .suggester-container .suggester {
+        background: $dropdown-bg !important;
+        
+        li {
+            color: $text-color !important;
+
+            &.navigation-focus, &:hover, &[aria-selected=true] {
+                background: $dropdown-bg-active !important;
+                color: $bright-text-color !important;
+            }
+        }
+    }
     .discussion-item-review .file-header {
         background-color: $border-color !important;
         border-color: $border-color !important;
@@ -92,6 +104,9 @@ body {
     }
     .review-summary::before {
         border-bottom-color: $tag-bg-color !important;
+    }
+    .review-summary-form-wrapper {
+        background-color: $comment-bg !important;
     }
     .discussion-timeline-actions {
         background-color: $bg-color !important;
@@ -191,15 +206,15 @@ body {
             color: $text-color;
         }
     }
-    .IssueLabel{
-        color: $text-black-color !important;
-
-        a{
-            color: $text-black-color !important;
-        }
-    }
     .pagination-loader-container {
         background-color: $bg-color !important;
         background-image: url('./img/progressive-disclosure-line@2x.png') !important;
+    }
+}
+
+.AvatarStack-body {
+    background-color: transparent !important;
+    .avatar {
+        background-color: transparent !important;
     }
 }
